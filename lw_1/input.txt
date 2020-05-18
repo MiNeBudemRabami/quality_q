@@ -9,7 +9,6 @@
 3 2 2 Isosceles triangle
 2 2 3 Isosceles triangle
 10 10 2 Isosceles triangle
-1 1 100 Isosceles triangle
 2 3 2 Isosceles triangle
 100 1 100 Isosceles triangle
 1 1 1 Equilateral triangle
@@ -20,7 +19,7 @@
 2 4 6 Not triangle
 0 2 3 Not triangle
 1 2 30 Not triangle
-1 a 3 Not triangle
+1 a 3 Unknown error
 1 -1 2 Not triangle
 1 1dc 0 Not triangle
 0 0 0 Not triangle
@@ -30,4 +29,10 @@ a b c Unknown error
 a 1 b Unknown error
 1 2 asd Unknown error
 qwe 1 zxc Unknown error
-a b c regular triangle
+a b c Regular triangle
+Not enought_args
+   Not enought_args
+  Not enought_args
+     Not enought_args
+1 2 Not enought_args
+a b Not enought_args

@@ -21,7 +21,6 @@ string RunExternalProgram(const char* path)
 
 		_pclose(inputFile);
 	}
-
 	return str;
 }
 
@@ -29,51 +28,71 @@ int main(int argc, char* argv[])
 {
 	if (argc != 3)
 	{
-		cerr << "input error. Try: test.exe lw_1.exe input.txt";
-		return 1;
+		cerr << "not enought args. Try test.exe program_name.exe input.txt " << endl;
 	}
 
-	ifstream fileInput(argv[2]);
-
-	if (!fileInput.is_open())
+	else
 	{
-		cerr << "This file does not exist" << endl;
-		return 1;
-	}
+		ifstream fileInput(argv[2]);
 
-	string line;
+		if (!fileInput.is_open())
+		{
+			cerr << "This file does not exist" << endl;
+		}
 
-	ofstream fileOutput("test_result.txt");
+		string line;
 
-	int i = 1;
+		ofstream fileOutput("test_result.txt");
 
-	while (getline(fileInput, line))
-	{
-		string sideA, sideB, sideC, str1, str2, expectedResult, result;
-
-		istringstream iss(line);
-
-		iss >> sideA >> sideB >> sideC >> str1 >> str2;
+		int i = 1;
 
 		const string SPACEBAR = " ";
 
-		expectedResult = str1 + SPACEBAR + str2 + "\n";
+		while (getline(fileInput, line))
+		{
+			string sideA, sideB, sideC, str1, str2, expectedResult, result, triangleSideStr;
 
-		string triangleSideStr = SPACEBAR + sideA + SPACEBAR + sideB + SPACEBAR + sideC;
+			istringstream iss(line);
 
-		result = RunExternalProgram(string(argv[1] + triangleSideStr).c_str());
+			iss >> sideA >> sideB >> sideC >> str1 >> str2;
 
+			const string SPACEBAR = " ";
 
+			if (sideA == "Not")
+			{
+				expectedResult = sideA + SPACEBAR + sideB;
+				triangleSideStr = SPACEBAR;
+			}
+			else if (sideB == "Not")
+			{
+				expectedResult = sideB + SPACEBAR + sideC;
+				triangleSideStr = SPACEBAR + sideA;
+			}
+			else if (sideC == "Not")
+			{
+				expectedResult = sideC + SPACEBAR + str1;
+				triangleSideStr = SPACEBAR + sideA + SPACEBAR + sideB;
+			}
+			else
+			{
+				expectedResult = str1 + SPACEBAR + str2;
+				triangleSideStr = SPACEBAR + sideA + SPACEBAR + sideB + SPACEBAR + sideC;
+			}
 
-		fileOutput << i << SPACEBAR << (result == expectedResult ? "done" : "error") << endl;
-		
-		
+			result = RunExternalProgram(string(argv[1] + triangleSideStr).c_str());
 
-		cout << i <<SPACEBAR << (result == expectedResult ? "done" : "error") << endl;
-		
-		++i;
+			result.pop_back();
+
+			fileOutput << i << ". " << (result == expectedResult ? "done" : "error") << endl;
+
+			/*
+			fileOutput << i << "." << triangleSideStr << SPACEBAR << expectedResult << SPACEBAR
+				<< ">> " << result << SPACEBAR << (result == expectedResult ? "done" : "error") << endl;
+			
+			cout << i << "." << triangleSideStr << SPACEBAR << expectedResult << SPACEBAR 
+				<< ">> " << result << SPACEBAR << (result == expectedResult ? "DONE" : "ERROR") << endl;
+			*/
+			++i;
+		}
 	}
-
-
-	return 0;
 }
