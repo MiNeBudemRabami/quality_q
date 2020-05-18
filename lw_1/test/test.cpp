@@ -45,6 +45,8 @@ int main(int argc, char* argv[])
 
 	ofstream fileOutput("test_result.txt");
 
+	int i = 1;
+
 	while (getline(fileInput, line))
 	{
 		string sideA, sideB, sideC, str1, str2, expectedResult, result;
@@ -61,8 +63,17 @@ int main(int argc, char* argv[])
 
 		result = RunExternalProgram(string(argv[1] + triangleSideStr).c_str());
 
-		fileOutput << (result == expectedResult ? "done" : "error") << endl;
+
+
+		fileOutput << i << SPACEBAR << (result == expectedResult ? "done" : "error") << endl;
+		
+		
+
+		cout << i <<SPACEBAR << (result == expectedResult ? "done" : "error") << endl;
+		
+		++i;
 	}
+
 
 	return 0;
 }
