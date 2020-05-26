@@ -1,0 +1,26 @@
+font: Calibri Light, Agency FB, Algerian, Arial
+inscription: Normal, Italics, Bold, Bold Italics
+size: 11, 12, 14
+text color: Blue, White, Black, Red
+underline: Yes, No
+underline color: Blue, No, Black, Red
+strikethrough: Yes, No
+double strikethrough: Yes, No
+superscript: Yes, No
+subscript: Yes, No
+shift: -100, -1, 0, 1, 100
+small caps: Yes, No
+all uppercase: Yes, No
+align characters: Yes, No
+
+IF [underline] = "No" THEN [underline color] = "No";
+IF [strikethrough] = "Yes" THEN [double strikethrough] = "No";
+IF [double strikethrough] = "Yes" THEN [strikethrough] = "No";
+IF [subscript] = "Yes" THEN [superscript] = "No";
+IF [superscript] = "Yes" THEN [subscript] = "No";
+IF [shift] > 0 THEN [superscript] = "Yes";
+IF [shift] < 0 THEN [subscript] = "Yes";
+IF [shift] = 0 THEN [superscript] = "No";
+IF [shift] = 0 THEN [subscript] = "No";
+IF [small caps] = "Yes" THEN [all uppercase] = "No";
+IF [all uppercase] = "Yes" THEN [small caps] = "No";
