@@ -1,0 +1,29 @@
+font	inscription	size	text color	underline	underline color	strikethrough	double strikethrough	superscript	subscript	shift	small caps	all uppercase	align characters
+Agency FB	Bold Italics	11	White	Yes	Black	No	No	No	No	0	Yes	No	No
+Arial	Normal	12	Black	No	No	No	Yes	No	Yes	-100	No	Yes	Yes
+Calibri Light	Italics	14	Red	Yes	Red	No	Yes	No	No	0	No	No	Yes
+Agency FB	Bold	11	Blue	Yes	Blue	Yes	No	No	Yes	-1	No	Yes	Yes
+Algerian	Bold	12	Black	Yes	Blue	No	Yes	Yes	No	1	Yes	No	No
+Algerian	Italics	14	White	Yes	Red	Yes	No	No	Yes	-100	No	Yes	No
+Arial	Bold Italics	14	Blue	Yes	Black	No	Yes	No	Yes	-100	Yes	No	Yes
+Arial	Bold Italics	11	Red	No	No	Yes	No	Yes	No	100	No	Yes	No
+Arial	Normal	12	White	Yes	Black	Yes	No	Yes	No	1	No	Yes	Yes
+Arial	Italics	12	Blue	Yes	Blue	No	Yes	No	No	0	No	Yes	No
+Arial	Normal	12	Red	Yes	Red	No	Yes	No	Yes	-1	Yes	No	No
+Algerian	Bold	14	Blue	No	No	No	Yes	No	No	0	Yes	No	Yes
+Calibri Light	Italics	11	Blue	Yes	Red	No	Yes	Yes	No	1	Yes	No	No
+Algerian	Italics	14	Black	Yes	Black	No	Yes	Yes	No	100	Yes	No	Yes
+Calibri Light	Bold Italics	12	Black	Yes	Blue	Yes	No	No	Yes	-1	No	Yes	No
+Algerian	Bold Italics	11	White	No	No	No	Yes	No	Yes	-1	Yes	No	Yes
+Calibri Light	Normal	14	White	Yes	Blue	No	Yes	Yes	No	100	Yes	No	Yes
+Agency FB	Italics	14	Black	No	No	No	Yes	No	Yes	-1	Yes	No	Yes
+Calibri Light	Normal	11	Black	Yes	No	Yes	No	No	No	0	Yes	No	Yes
+Calibri Light	Bold	11	Red	Yes	Blue	No	No	No	Yes	-100	No	No	No
+Agency FB	Normal	12	Blue	Yes	Red	No	Yes	Yes	No	100	Yes	No	Yes
+Agency FB	Bold Italics	14	Red	Yes	Red	No	No	Yes	No	1	No	No	No
+Arial	Bold	14	Red	Yes	Black	No	Yes	No	Yes	-1	No	No	Yes
+Algerian	Normal	14	Red	No	No	No	Yes	Yes	No	1	No	Yes	No
+Agency FB	Bold	11	White	Yes	Red	No	Yes	Yes	No	100	No	Yes	Yes
+Calibri Light	Normal	14	Red	Yes	Black	No	Yes	Yes	No	100	No	Yes	Yes
+Agency FB	Normal	14	Black	Yes	Red	No	Yes	No	Yes	-100	No	No	Yes
+Calibri Light	Normal	14	Black	No	No	No	Yes	No	Yes	-100	No	Yes	No
