@@ -1,0 +1,65 @@
+{
+	"port": 1234,
+	"protocol": "http",
+	"stubs": [{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/message_1"
+			}
+		}],
+		"responses": [
+			{
+				"is": {
+					"statusCode": 200,
+					"headers": {
+						"Content-Type": "application/json"
+					},
+					"body": "this is first message"
+				}
+			}
+			
+		]
+	},
+	{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/message_2"
+			}
+		}],
+		"responses": [
+			{
+				"is": {
+					"statusCode": 200,
+					"headers": {
+						"Content-Type": "application/json"
+					},
+					"body": "this is second message"
+				}
+			}
+			
+		]
+	},
+	{
+		"predicates": [{
+			"equals": {
+				"method": "GET",
+				"path": "/message_3"
+			}
+		}],
+		"responses": [
+			{
+				"is": {
+					"statusCode": 200,
+					"headers": {
+						"Content-Type": "application/json"
+					},
+					"body": "this is third message"
+				}
+			}
+			
+		]
+	}
+	]
+}
