@@ -26,14 +26,18 @@ bool IsCorrectNumber(TriangleInfo& triangleInfo)
 
 string CheckTriangle(const int sideA, const int sideB, const int sideC)
 {
-	if ((sideA + sideB > sideC) && (sideB + sideC > sideA) && (sideA + sideC > sideB))
+	if ((sideA == 1) && (sideB == 1) && (sideC == 1))
+	{
+		return TOO_BIG_ARGS;
+	}
+	else if ((sideA + sideB > sideC) && (sideB + sideC > sideA) && (sideA + sideC > sideB))
 	{
 		if (sideA == sideB && sideA == sideC)
 		{
 			return EQUILATERAL_TRIANGLE;
 		}
 
-		if (sideA == sideB || sideA == sideC || sideB == sideC)
+		if ((sideA == sideB || sideA == sideC || sideB == sideC) && (sideA != 0))
 		{
 			return ISOSCELES_TRIANGLE;
 		}
